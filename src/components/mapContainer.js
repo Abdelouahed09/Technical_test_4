@@ -24,8 +24,7 @@ const MapContainer = ({ geoJSON }) => {
 
   useEffect(() => {
     console.log("Received geoJSON: ", geoJSON);
-    mapboxgl.accessToken =
-      "pk.eyJ1IjoiZnJhbmNvbzE1IiwiYSI6ImNsZG9vOXhscjAyZjAzd250cHBoZzNrN2cifQ.MscpBIX54RHk3Igo254W-Q";
+    mapboxgl.accessToken = "MY_API";
     const map = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/mapbox/streets-v11",
@@ -56,8 +55,7 @@ const MapContainer = ({ geoJSON }) => {
         layers={layers}
         controller={true}
         onWebGLInitialized={(gl) => {
-          mapboxgl.accessToken =
-            "pk.eyJ1IjoiZnJhbmNvbzE1IiwiYSI6ImNsZG9vOXhscjAyZjAzd250cHBoZzNrN2cifQ.MscpBIX54RHk3Igo254W-Q";
+          mapboxgl.accessToken = "MY_API";
           const map = new mapboxgl.Map({
             container: mapContainer.current,
             style: "mapbox://styles/mapbox/streets-v11",
